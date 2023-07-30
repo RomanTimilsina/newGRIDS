@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+    }
+
+    .main{
+      background-color: #232891;
+
+
+    }
+
+    .titles{
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .title{
+      width: 50%;
+      overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+      
+    }
+
+    .title:only-child{
+
+    }
+
+    
+    
+    
+    .sub{
+      grid-area:'titles'
+    
+    }
+
+    .img{
+      grid-area: 'img'
+    }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .secondary{
+      display: grid;
+      grid-template-columns: 1fr .2fr;
+    }
+
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      
+
+    }
+    img{
+      width: 100%;
+      height: 300px;
+    }
+    .info{
+      display: flex;
+      gap: 5px;
+    }
+
+    .container{
+      color: #fefcfc;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+     
+    }
+
+    .cardContainer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      color: #000;
+      column-gap: 10px;
+    }
+
+    .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+     .personCard{
+      display: grid;
+      column-gap: 10px;
+      row-gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+    } 
+
+    .person{
+      display: flex;
+      gap: 10px;
+      border-radius: 5px;
+      padding: 10px;
+      align-items: center;
+      background-color: #360a93;
+    }
+
+    .ImgPer{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+    }
+
+    .search{
+      background-color: #fff;
+      width: 50%;
+      display: flex;
+      border-radius: 5px;
+      justify-content: space-between;
+    }
+
+    input{
+      border: none;
+      border-radius: 5px;
+
+      outline: none;
+      padding: 9px;
+    }
+
+    button{
+      background-color: #8989fa;
+      border: none;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+
+    .footer{
+      color: #656565;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      align-items: center;
+    }
+
+    
+    
+    
+    .foot{
+      font-size: 19px;
+    }
+
+    .foot > :first-child{
+      font-size: 25px;
+      color: #000;
+    }
+
+    .footImg{
+width: 5%;
+height: 5%;    }
+
+@media  (max-width: 480px) {
+  .cardContainer, .navbar, .personCard{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  
+  .mainImg{
+display: none;
+}
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+    <div class="navbar">
+      <h1 class="headline">      Sample Grid
+    </h1>
+    <div class="info">
+      <div class="item">Home</div>
+      <div class="item">Gallery</div>
+    </div>
+
+  </div>
+  <div class="secondary">
+    <div class="titles">
+      <div class="title">Lorem</div>
+      <div class="search">
+        <input type="text">
+        <button>Search</button>
+      </div>
+    <div class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero et ducimus voluptatibus ullam impedit obcaecati incidunt numquam. Quae atque quidem temporibus mollitia facilis, necessitatibus eaque voluptates officia maxime, dolores sequi.</div>
+  </div>
+  <div class="img">
+    <img class='mainImg' src="https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+  </div>
+    </div>
+  </div>
+    <div class="cardContainer">
+      <div class="card">
+        <h1>HI</h1>
+        <p>texts</p>
+      </div>
+      <div class="card">
+        <h1>HI</h1>
+        <p>texts</p>
+      </div>
+      <div class="card">
+        <h1>HI</h1>
+        <p>texts</p>
+      </div>
+    </div>
+    <div class="personCard">
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/17751042/pexels-photo-17751042.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/17043022/pexels-photo-17043022/free-photo-of-portrait-of-elderly-woman.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/14407803/pexels-photo-14407803.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+      <div class="person">
+        <img class="ImgPer" src="https://images.pexels.com/photos/17659341/pexels-photo-17659341/free-photo-of-black-buck.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="info">This is Sasha</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="foot">
+        <h3>Contacts</h3>
+        <p>
+          My name: rambo
+        </p>
+        <p>
+          My number: 987654376
+        </p>
+      </div>
+      <p>
+        Objective of Company
+      </p>
+      <img class="footImg" src="https://images.pexels.com/photos/17075271/pexels-photo-17075271/free-photo-of-a-person-holding-a-puppy.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+
+      
+    </div>
+</div>
+
+  
+</body>
+</html>
